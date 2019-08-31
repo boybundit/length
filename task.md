@@ -3,7 +3,7 @@
 1. I need a length, they can compare with each other, like 1==1, 2==2
 - ~~Length(1) == Length(1)~~
 - ~~Length(2) == Length(2)~~
-- **Length(1) != Length(2)**
+- ~~Length(1) != Length(2)~~
 
 2. Add a unit, the same unit can be compared, like 1cm==1cm
 - Length(1, cm).unit == cm
