@@ -17,4 +17,10 @@ public class LengthTest {
         Length anotherTwo = new Length(2);
         assertEquals(two, anotherTwo);
     }
+    @Test
+    void given_length_1_when_compare_to_length_2_then_it_should_not_be_equal() {
+        Length one = new Length(1);
+        Length two = new Length(2);
+        assertNotEquals(one, two, "Length(1) should not equal to Length(2)");
+    }
 }
