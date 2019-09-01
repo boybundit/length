@@ -13,12 +13,7 @@ public class Length {
     }
 
     public Length toBaseUnit() {
-        int multiplier = 1;
-        LengthUnit baseUnit = LengthUnit.m;
-        if (this.lengthUnit == LengthUnit.cm) {
-            multiplier = 100;
-        }
-        return new Length(this.length / multiplier, baseUnit);
+        return new Length(this.lengthUnit.toBaseUnitValue(this.length), this.lengthUnit.baseUnit);
     }
 
     @Override
