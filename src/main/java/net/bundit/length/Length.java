@@ -1,5 +1,7 @@
 package net.bundit.length;
 
+import net.bundit.length.LengthUnit;
+
 public class Length {
 
     private int length;
@@ -11,7 +13,12 @@ public class Length {
     }
 
     public Length toBaseUnit() {
-        return this;
+        int multiplier = 1;
+        String baseUnit = LengthUnit.m;
+        if (this.lengthUnit == LengthUnit.cm) {
+            multiplier = 100;
+        }
+        return new Length(this.length / multiplier, baseUnit);
     }
 
     @Override
