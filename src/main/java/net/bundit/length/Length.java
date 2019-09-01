@@ -10,6 +10,10 @@ public class Length {
         this.lengthUnit = lengthUnit;
     }
 
+    public Length toBaseUnit() {
+        return this;
+    }
+
     @Override
     public boolean equals(Object anotherObject) {
         if (anotherObject == this) {

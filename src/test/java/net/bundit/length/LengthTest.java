@@ -41,4 +41,10 @@ public class LengthTest {
         Length one_m = new Length(1, LengthUnit.m);
         assertNotEquals(one_cm, one_m, "Length(1cm) should not equal to Length(1m)");
     }
+    @Test
+    void given_length_100cm_when_convert_to_base_unit_then_it_should_become_1m() {
+        Length oneHundred_cm = new Length(100, LengthUnit.cm);
+        Length one_m = new Length(1, LengthUnit.m);
+        assertEquals(oneHundred_cm.toBaseUnit(), one_m);
+    }
 }
