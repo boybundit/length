@@ -4,10 +4,10 @@ import net.bundit.length.LengthUnit;
 
 public class Length {
 
-    private int length;
+    private double length;
     private String lengthUnit;
 
-    public Length(int length, String lengthUnit) {
+    public Length(double length, String lengthUnit) {
         this.length = length;
         this.lengthUnit = lengthUnit;
     }
@@ -30,8 +30,14 @@ public class Length {
             return false;
         }
         Length anotherLength = (Length)anotherObject;
-        return (this.length == anotherLength.length) &&
-                (this.lengthUnit == anotherLength.lengthUnit);
+        Length anotherLengthInBaseUnit = anotherLength.toBaseUnit();
+        Length thisInBaseUnit = this.toBaseUnit();
+        return (thisInBaseUnit.length == anotherLengthInBaseUnit.length);
     }
 
+    @Override
+    public String toString() {
+        return "Length(" + this.length + this.lengthUnit + ")";
+
+    }
 }
