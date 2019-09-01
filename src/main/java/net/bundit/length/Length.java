@@ -4,7 +4,7 @@ public class Length {
 
     private int length;
 
-    public Length(int length) {
+    public Length(int length, String lengthUnit) {
         this.length = length;
     }
 
