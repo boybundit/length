@@ -29,4 +29,10 @@ public class LengthTest {
         Length anotherOne = new Length(1, LengthUnit.m);
         assertEquals(one, anotherOne);
     }
+    @Test
+    void given_length_1m_when_compare_to_length_2m_then_it_should_not_be_equal() {
+        Length one = new Length(1, LengthUnit.m);
+        Length two = new Length(2, LengthUnit.m);
+        assertNotEquals(one, two, "Length(1m) should not equal to Length(2m)");
+    }
 }
