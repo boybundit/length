@@ -23,4 +23,10 @@ public class LengthTest {
         Length two = new Length(2, LengthUnit.cm);
         assertNotEquals(one, two, "Length(1cm) should not equal to Length(2cm)");
     }
+    @Test
+    void given_length_1m_when_compare_to_length_1m_then_it_should_be_equal() {
+        Length one = new Length(1, LengthUnit.m);
+        Length anotherOne = new Length(1, LengthUnit.m);
+        assertEquals(one, anotherOne);
+    }
 }
