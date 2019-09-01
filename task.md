@@ -6,9 +6,9 @@
 - ~~Length(1) !== Length(2)~~
 
 2. Add a unit, the same unit can be compared, like 1cm==1cm
-- **Length(1, cm) == Length(1, cm)**
-- Length(1, cm) !== Length(2, cm)
-- Length(1, m) == Length(1, m)
+- ~~Length(1, cm) == Length(1, cm)~~
+- ~~Length(1, cm) !== Length(2, cm)~~
+- **Length(1, m) == Length(1, m)**
 - Length(1, m) !== Length(2, m)
 
 3. The length of different units can also be compared after conversion like: 100cm==1m
