@@ -5,16 +5,16 @@ import net.bundit.length.LengthUnit;
 public class Length {
 
     private double length;
-    private String lengthUnit;
+    private LengthUnit lengthUnit;
 
-    public Length(double length, String lengthUnit) {
+    public Length(double length, LengthUnit lengthUnit) {
         this.length = length;
         this.lengthUnit = lengthUnit;
     }
 
     public Length toBaseUnit() {
         int multiplier = 1;
-        String baseUnit = LengthUnit.m;
+        LengthUnit baseUnit = LengthUnit.m;
         if (this.lengthUnit == LengthUnit.cm) {
             multiplier = 100;
         }
