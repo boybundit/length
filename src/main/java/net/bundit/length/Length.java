@@ -3,9 +3,11 @@ package net.bundit.length;
 public class Length {
 
     private int length;
+    private String lengthUnit;
 
     public Length(int length, String lengthUnit) {
         this.length = length;
+        this.lengthUnit = lengthUnit;
     }
 
     @Override
@@ -17,7 +19,8 @@ public class Length {
             return false;
         }
         Length anotherLength = (Length)anotherObject;
-        return this.length == anotherLength.length;
+        return (this.length == anotherLength.length) &&
+                (this.lengthUnit == anotherLength.lengthUnit);
     }
 
 }
